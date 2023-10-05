@@ -1,0 +1,38 @@
+Entrada                     
+Joao
+123456
+1000.0
+1.5 
+
+Saída
+Conta Poupanca:
+Joao
+123456
+Saldo: R$ 1000.0
+Taxa de juros: 1.5%
+
+Entrada
+Ana
+789012
+2500.0
+3.0 
+
+Saída
+Conta Poupanca:
+Ana
+789012
+Saldo: R$ 2500.0
+Taxa de juros: 3.0%
+
+Entrada
+Maria
+987654
+500.0
+2.5 	
+
+Saída
+Conta Poupanca:
+Maria
+987654
+Saldo: R$ 500.0
+Taxa de juros: 2.5%
