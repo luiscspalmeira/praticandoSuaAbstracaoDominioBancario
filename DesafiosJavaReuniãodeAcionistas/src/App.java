@@ -13,9 +13,9 @@ public class App {
         String dataFinal = scanner.nextLine();
 
         SistemaAcionistas sistemaAcionistas = new SistemaAcionistas();
-        List < String > analises = sistemaAcionistas.obterAnalisesDesempenho(dataInicial, dataFinal);
+        List < Analise > analises = sistemaAcionistas.obterAnalisesDesempenho(dataInicial, dataFinal);
 
-        for (String analise: analises) {
+        for (Analise analise: analises) {
         System.out.println(analise);
         }
     }

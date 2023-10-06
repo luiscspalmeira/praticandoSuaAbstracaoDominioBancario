@@ -5,7 +5,8 @@ import java.util.List;
 import java.util.Date;
 
 public class SistemaAcionistas {
-    public List < String > obterAnalisesDesempenho(String dataInicialStr, String dataFinalStr) throws ParseException {
+    //public List < String > obterAnalisesDesempenho(String dataInicialStr, String dataFinalStr) throws ParseException {
+    public List < Analise > obterAnalisesDesempenho(String dataInicialStr, String dataFinalStr) throws ParseException {
         SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
         Date dataInicial = df.parse(dataInicialStr);
         Date dataFinal = df.parse(dataFinalStr);
@@ -20,7 +21,19 @@ public class SistemaAcionistas {
         analises.add(new Analise(df.parse("30/06/2023"), "Analise de Inovacao e Tecnologia"));
 
         //TODO: Implemente o filtro das análises dentro do período especificado. Dica: Crie uma lista para armazenar as análises filtradas e use um loop for para filtrar as análises.
-            
+        
+        List<Analise> analisesFiltradas = new ArrayList<>();
+
+        if(!analises.isEmpty()){
+            for (Analise a : analises){
+                if(a.getData().equals(dataInicial) || a.getData().equals(dataFinal))
+                    analisesFiltradas.add(a);
+                if(a.getData().after(dataInicial) && a.getData().before(dataFinal))
+                    analisesFiltradas.add(a);
+                
+            }
+        }
         // TODO: Retorne a lista de análises filtradas.
+        return analisesFiltradas;
     }
 }

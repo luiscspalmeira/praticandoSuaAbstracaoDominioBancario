@@ -8,4 +8,21 @@ public class Analise {
         this.data = data;
         this.descricao = descricao;
     }
+
+    public Date getData(){
+        return data;
+    }
+
+    public String getDescricao(){
+        return descricao;
+    }
+
+    @Override
+    public String toString() {
+        //return "Analise [data=" + data + ", descricao=" + descricao + "]";
+        return descricao;
+    }
+
+    
+
 }
